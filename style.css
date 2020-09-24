@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+.wrapper {
+    background-color: #222;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+
+.controls ul {
+    list-style: none;
+}
+
+canvas {
+    background-color: #000;
+    border-radius: 4px;
+    box-shadow: 0 0 100px #000;
+}
