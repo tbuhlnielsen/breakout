@@ -1,35 +1,82 @@
 * {
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #aaa;
+    font-family: "Press Start 2P", monospace;
     line-height: 1.5;
+    margin: 0;
 }
 
-.wrapper {
+.container {
     background-color: #222;
     height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+/* § Controls list */
 .controls {
     position: absolute;
-    left: 10px;
     top: 5px;
+    left: 5px;
 }
 
-.controls ul {
+.controls__btn {
+    background-color: #222;
+    color: #aaa;
+    cursor: pointer;
+    font-family: "Press Start 2P", monospace;
+    font-size: 1.2rem;
+    padding: 10px;
+    border: none;
+}
+
+.controls__btn:hover {
+    color: #eee;
+}
+
+.fa-chevron-down {
+    margin-left: -5px;
+}
+
+.controls__content {
+    font-size: 0.8rem;
+    display: none;
+}
+
+.controls__content--show {
+    display: block;
+}
+
+.controls__list {
     list-style: none;
+    padding-left: 10px;
+    margin: 0;
 }
 
+/* § Game area */
 canvas {
     background-color: #000;
     border-radius: 4px;
     box-shadow: 0 0 100px #000;
+}
+
+/* § Device message */
+.device-msg {
+    width: 75%;
+    display: none;
+}
+
+/* § Media queries */
+@media(max-width: 800px) {
+.controls, canvas {
+    display: none;
+}
+
+.device-msg {
+    display: block;
+}
 }

@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- JS -->
+    <script src="main.js" defer></script>
+
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="manifest" href="images/favicon/site.webmanifest">
 
-    <script defer src="main.js"></script>
+    <!-- External (fonts etc.) -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d54243f569.js" crossorigin="anonymous"></script>
 
     <title>Breakout</title>
 </head>
@@ -19,17 +26,19 @@
 <body>
     <main>
         <div class="controls">
-            <h2>Controls</h2>
-            <ul>
-                <li>ENTER - reset (after losing or winning)</li>
-                <li>SPACE - launch ball (after resetting)</li>
-            </ul>
+            <button class="controls__btn">Controls <i class="fas fa-chevron-down"></i></button>
+            <div class="controls__content">
+                <ul class="controls__list">
+                    <li>SPACE = launch ball</li>
+                    <li>ENTER = reset game</li>
+                    <li>LEFT/RIGHT = move</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="wrapper">
-            <div>
-                <canvas width="768" height="480"></canvas>
-            </div>
+        <div class="container">
+            <canvas width="768" height="480"></canvas>
+            <p class="device-msg">Your screen must be at least 800 pixels wide to play.</p>
         </div>
     </main>
 </body>

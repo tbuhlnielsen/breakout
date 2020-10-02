@@ -1,6 +1,15 @@
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
+// § Controls menu
+const controlsBtn = document.querySelector(".controls__btn");
+const controls = document.querySelector(".controls__content");
+
+// Show/hide the menu when the controls button is clicked.
+controlsBtn.addEventListener("click", function () {
+    controls.classList.toggle("controls__content--show");
+});
+
 // § Constants.
 const midX = canvas.width / 2;
 const bottomY = canvas.height;
